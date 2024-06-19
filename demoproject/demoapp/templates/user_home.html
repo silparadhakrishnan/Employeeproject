@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    {% load static %} <!-- Load static files in Django -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Background image -->
+        <img src="{% static 'images/user_image.jpg' %}" alt="Background Image"> <!-- Image that serves as the background -->
+        <!-- Semi-transparent overlay -->
+        <div class="overlay"></div> <!-- Overlay to darken the background image -->
+        <!-- Transparent navbar with centered links -->
+        <div class="navbar">
+            <a href="{% url 'profile_view' %}">View profile</a> <!-- Login link -->
+            <a href="{% url 'logout_view' %}">Logout</a> <!-- Register Employee link -->
+        </div>
+        {% comment %} <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> {% endcomment %}
+    </div>
+</body>
+</html>
+
+

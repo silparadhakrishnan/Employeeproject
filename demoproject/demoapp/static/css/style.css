@@ -1,0 +1,74 @@
+/* Basic reset for body and html */
+body, html {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100%; /* Set height to 100% of viewport */
+    width: 100%; /* Set width to 100% of viewport */
+    font-family: Arial, sans-serif; /* Set default font */
+}
+
+/* Container setup */
+.container {
+    position: relative; /* Establish a positioning context for children */
+    height: 100vh; /* Set specific height to full viewport height */
+    width: 100%; /* Set width to 100% of parent */
+    background-image: url('images/my_img.jpg');
+}
+
+/* Full-width background image */
+img {
+    height: 100%; /* Match container height */
+    width: 100%; /* Set width to 100% of parent */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+/* Semi-transparent overlay */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Set a semi-transparent black background */
+    position: absolute; /* Position it absolutely within the container */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    height: 100%; /* Cover the full height of the container */
+    width: 100%; /* Cover the full width of the container */
+}
+
+/* Transparent navbar with centered links */
+.navbar {
+    position: absolute; /* Position it absolutely within the container */
+    top: 0; /* Align to the top */
+    width: 100%; /* Set width to 100% of parent */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the nav links */
+    align-items: center; /* Center the nav links vertically */
+    height: 60px; /* Set a specific height for the navbar */
+    background: transparent; /* Set background to transparent */
+}
+
+/* Navbar link styling */
+.navbar a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove default underline */
+    margin: 0 20px; /* Add horizontal margin for spacing */
+    font-size: 18px; /* Set font size */
+    position: relative; /* Set relative positioning for pseudo-element */
+}
+
+/* Underline effect on hover */
+.navbar a::after {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Position absolutely within the link */
+    width: 0; /* Start with no width */
+    height: 2px; /* Set height of the underline */
+    bottom: -5px; /* Position 5px below the text */
+    left: 50%; /* Start at the center */
+    transform: translateX(-50%); /* Center it horizontally */
+    background: rgb(255, 255, 255); /* Set underline color to white */
+    transition: width 0.4s; /* Animate the width change */
+}
+
+/* Expand underline on hover */
+.navbar a:hover::after {
+    width: 100%; /* Expand to full width on hover */
+}
+
+

@@ -1,0 +1,20 @@
+
+.form-control-custom {
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+label {
+    color: rgb(226, 222, 222); /* Set label color to white */
+    font-family: 'Arial', sans-serif; /* Set font type */
+}
+#id_username_helptext.helptext{
+    color: rgb(226, 222, 222);
+}
+img{
+    height: 1020px;
+    width: 100%;
+    object-fit: cover;
+}
+

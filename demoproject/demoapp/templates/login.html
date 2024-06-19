@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %} <!-- Load static files in Django -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}"> 
+</head>
+<body>
+    <img src="{% static 'images/background_img.jpg' %}" alt="Background Image">
+   <div style="background: rgb(0,0,0,0.3);width:280px; height:280px ; position:absolute;top:25% ;left:39%; padding:30px; border-radius:10px">
+    <form action=""method="POST">
+        {% csrf_token %}
+        {{form}}
+
+        <input type="submit">
+    </form>
+    
+</div>
+</body>
+</html>
